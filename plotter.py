@@ -18,6 +18,7 @@ def distance_plot(drives):
     X = np.arange(1, 0, -1.0/len(drives))
     Y = np.array(distances)
 
+    plt.figure(figsize=(8,5))
     plt.plot(X, Y)
     plt.title("distances of uber rides cdf")
     plt.xlabel("fraction of rides longer than this")
@@ -46,6 +47,7 @@ def max_overlap_fractions_plot(drives):
     
     X = np.arange(1, 0, -1.0/len(max_overlap_fractions))
     Y = np.array(max_overlap_fractions)
+    plt.figure(figsize=(8,5))
     plt.plot(X, Y)
     plt.title("overlaps of uber rides cdf")
     plt.xlabel("fraction of rides overlapping more than this")
